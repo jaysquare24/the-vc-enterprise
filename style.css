@@ -4,8 +4,9 @@ body {
   font-family: "Lexend Mega", sans-serif;
   color: black;
   background-color: white;
-  font-size: 16px;
+  font-size: 18px;
   text-align: center;
+ 
 }
 
 a {
@@ -16,21 +17,27 @@ h2,
 h3,
 h4,
 p {
+  
   margin: 0;
   padding: 10px;
 }
 
 .header {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: cetner;
+  align-items: center;
+  
 }
 
+
+
 .navbar {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 0 10%;
+ 
 }
 
 .navbar p {
@@ -38,16 +45,22 @@ p {
   padding: 10px 10px;
 }
 
+#menu-group{
+  display: none;
+}
+
 .main {
+ 
   padding-top: 35px;
   opacity: 0.9;
 }
 
 .mission {
+  box-sizing: border-box ;
   display: flex;
   height: 300px;
   background-image: url("https://codecademy-content.s3.amazonaws.com/PRO/independent-practice-projects/flexbox-business-site/img/skyscrapers.jpg");
-  padding-top: 35px;
+ 
 }
 
 .mission .content {
@@ -63,6 +76,7 @@ p {
 }
 
 .companies {
+  box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -70,6 +84,7 @@ p {
 }
 
 .company {
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -83,7 +98,7 @@ p {
   height: auto;
 }
 
-.company span {
+.company p {
   padding: 5px;
   min-width: 240px;
   font-weight: bold;
@@ -91,11 +106,13 @@ p {
 }
 
 #team-container{
+  box-sizing: border-box;
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
 .team {
+ 
   background-image: url("https://codecademy-content.s3.amazonaws.com/PRO/independent-practice-projects/flexbox-business-site/img/blurred-road.jpg");
   padding-top: 70px;
   padding-top: 5px;
@@ -109,6 +126,7 @@ p {
   padding: 10px;
   color: white;
   flex-basis: 280px;
+ 
 }
 
 .teammate img {
@@ -121,4 +139,41 @@ p {
 .contact,
 .copyright {
   padding-top: 20px;
+}
+
+@media only screen and (max-width: 460px) {
+
+  #menu-group{
+    display: block;
+    
+   
+  }
+
+  .navbar{
+    display: none;
+
+  }
+
+  
+
+  .company {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
+  }
+
+  .company img{
+    width: 80%;
+   
+
+  }
+
+  .teammate img{
+    width: 100%;
+  }
+
+  
 }
